@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-icon name="options-outline"></ion-icon>
+    <ion-title>
+      วันจ่ายเงินเดือน
+    </ion-title>
+    
+
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item (click)="tapEvent(info_revenuePage)">
+          25 ธันวาคม 2561
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item (click)="tapEvent(Type_expenditurePage)">
+          25 พฤศจิกายน 2561
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item (click)="tapEvent(BlankPage)">
+          25 ตุลาคม 2561
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item (click)="tapEvent(FinePage)">
+          25 กันยายน 2561
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-fab bottom right>
+    <button ion-button (click)="define_date_salary()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-footer>

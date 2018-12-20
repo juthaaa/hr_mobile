@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-icon name="arrow-back"></ion-icon>
+    <ion-title>
+      ข้อมูลพื้นฐาน
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="doClick()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+  <br><br>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <br>
+    <ion-title>ข้อมูลประเภทรายรับ</ion-title>
+    <ion-list><br>
+      <ion-card>
+        <br>
+        <ion-item>
+
+          <ion-input placeholder="ชื่อรายรับ"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-select placeholder="หน่วยรายรับ" style="min-width: 100%;">
+            <ion-option value="1">บาท</ion-option>
+            <ion-option value="2">เปอร์เซ็น</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-card>
+      <br>
+    </ion-list>
+
+    <button ion-button block> บันทึก</button>
+  </ion-card>
+</ion-content>

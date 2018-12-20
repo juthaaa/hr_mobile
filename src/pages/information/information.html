@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ข้อมูลพื้นฐาน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item (click)="info_revenuePage()">
+        ข้อมูลประเภทรายรับ
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item (click)="tapEvent(Type_expenditurePage)">
+        ข้อมูลประเภทรายจ่าย
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item (click)="tapEvent(BlankPage)">
+        ข้อมูลประเภทธนาคาร
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item (click)="tapEvent(FinePage)">
+        ข้อมูลประเภทค่าปรับ
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

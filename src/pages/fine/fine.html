@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-icon name="arrow-back"></ion-icon>
+    <ion-title>
+      ข้อมูลค่าปรับ
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="doClick()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+  <br><br>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <br>
+    <ion-card>
+      <ion-item>
+        <ion-title>ข้อมูลประเภทค่าปรับ</ion-title>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <ion-icon name="search"></ion-icon>
+        </ion-label>
+        <ion-input placeholder="ชื่อบุคลากร"></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-list><br>
+
+      <ion-card>
+        <ion-item>
+          <!-- <ion-label>ประเภทค่าปรับ</ion-label> -->
+          <ion-select placeholder="ประเภทค่าปรับ" style="min-width: 100%;">
+            <ion-option value="1">ร้ายแรง</ion-option>
+            <ion-option value="2">ปกติ</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-input placeholder=คำอธิบายค่าปรับ></ion-input>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-input type="number" placeholder=จำนวน></ion-input>
+        </ion-item>
+      </ion-card>
+      <br>
+    </ion-list>
+    <ion-item>
+      <button ion-button block>บันทึก</button>
+    </ion-item>
+
+  </ion-card>
+</ion-content>

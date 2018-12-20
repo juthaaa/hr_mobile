@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ข้อมูลรายรับ</ion-title>
+    <ion-icon (click)="pop_page()" name="arrow-back"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        เงินเดือนประจำตำแหน่ง
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        เงินเดือน
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        เงินเดือนย้อนหลัง
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        โบนัส
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
+
+
+<ion-footer>
+  <ion-fab bottom right>
+    <button ion-button (click)="add_info_revenue()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-footer>

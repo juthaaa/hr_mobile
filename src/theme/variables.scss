@@ -86,3 +86,7 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+*{
+  font-family: 'Kanit',sans-serif;
+}

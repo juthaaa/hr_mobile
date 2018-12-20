@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- <ion-icon name="arrow-back"></ion-icon> -->
+    <ion-title>
+      รายงานวันจ่ายเงินเดือน
+    </ion-title>
+
+
+  </ion-navbar>
+  <br><br>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="today">
+        TODAY
+      </ion-segment-button>
+      <ion-segment-button value="week">
+        WEEK
+      </ion-segment-button>
+      <ion-segment-button value="month">
+        MONTH
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-8>
+            <ion-img width="280" height="280" src="http://dekdee.informatics.buu.ac.th/~59160164/grahp2.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="checkbox" color="primary"></ion-icon>บุคลากรที่ทำเงินเดือนแล้ว <small item-end>75%</small>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="checkbox" color="danger"></ion-icon>บุคลากรที่ยังไม่ทำเงินเดือน <small item-end>25%</small>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
