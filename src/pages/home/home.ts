@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import { ReportSalaryPage } from '../report-salary/report-salary';
 import { ReportFinePage } from '../report-fine/report-fine';
+import { ReportSalaryDatePage } from '../report-salary-date/report-salary-date';
 
 @Component({
   selector: 'page-home',
@@ -14,12 +15,16 @@ export class HomePage {
 
   }
 
-  report_salary() {
-    this.navCtrl.push(ReportSalaryPage)
+  report_salary_date() {
+    this.navCtrl.push(ReportSalaryDatePage)
   }
 
   report_fine(){
     this.navCtrl.push(ReportFinePage)
+  }
+
+  report_salary(){
+    this.navCtrl.push(ReportSalaryPage)
   }
 
 }
