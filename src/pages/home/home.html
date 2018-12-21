@@ -1,15 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <ion-buttons>
-      <ion-icon name="options-outline"></ion-icon>
-    </ion-buttons>
+
 
     <ion-title>หน้าหลัก</ion-title>
 
 
   </ion-navbar>
 </ion-header>
-
+{{arr_person}}
 <ion-content padding>
   <ion-card>
     <ion-card-content>
@@ -36,160 +34,19 @@
 
 
       <ion-list>
-        <ion-item>
+        <ion-item *ngFor="let row_person of arr_person; let i = index">
           <ion-avatar item-start>
             <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
           </ion-avatar>
-          <h2>นายธนานันต์ เติมสิริสุขสินสุข</h2>
-          <p>ผู้บริหาร</p>
+          <h2>{{row_person.ps_fname}} {{row_person.ps_lname}}</h2>
+          <p>{{row_person.admin_name}}</p>
           <label item-end>
             <ion-icon name="close-circle" color="danger"></ion-icon>
           </label>
         </ion-item>
       </ion-list>
 
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นายศุภวิชญ์ ศิลาอาสน์</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
 
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นายวัชโรธร สมนึก</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นางสาวณัชชา บัวทิม</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นายจุฑาธวัช ศตะกูรมะ</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นายอธิพงศ์ บุญโกย</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นายกิตติพร ศิลารัก</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นางสาวธมณพัชร์ ด่านเจ้าแดง</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นางสาวสิรินาถ กะการดี</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นายณัฐชนน โพธิ์งาม</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นายธีรัช นาคสุทธิ์</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/46450948_2262633603973521_7852130854896664576_n.jpg?_nc_cat=108&_nc_ht=scontent-sin6-1.xx&oh=125c09b3c6b2567d2234f5ee8bd34c73&oe=5CA824DA">
-          </ion-avatar>
-          <h2>นายเจตวัฒน์ บัวรื่น</h2>
-          <p>ผู้บริหาร</p>
-          <label item-end>
-            <ion-icon name="close-circle" color="danger"></ion-icon>
-          </label>
-        </ion-item>
-      </ion-list>
 
     </ion-card-content>
 
