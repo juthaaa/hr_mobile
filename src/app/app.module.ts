@@ -13,6 +13,7 @@ import { InfoRevenuePage } from '../pages/info-revenue/info-revenue';
 import { ReportSalaryPage } from '../pages/report-salary/report-salary';
 import { SalaryHistoryDefinePage } from '../pages/salary-history-define/salary-history-define';
 import { InfoRevenueAddPage } from '../pages/info-revenue-add/info-revenue-add';
+import { ReportFinePage } from '../pages/report-fine/report-fine';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,7 +30,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     InfoRevenuePage,
     ReportSalaryPage,
     SalaryHistoryDefinePage,
-    InfoRevenueAddPage
+    InfoRevenueAddPage,
+    ReportFinePage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     InfoRevenuePage,
     ReportSalaryPage,
     SalaryHistoryDefinePage,
-    InfoRevenueAddPage
+    InfoRevenueAddPage,
+    ReportFinePage
   ],
   providers: [
     StatusBar,

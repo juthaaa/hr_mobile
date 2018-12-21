@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- <ion-icon name="arrow-back"></ion-icon> -->
+    <ion-title>
+      รายงานค่าปรับ
+    </ion-title>
+
+
+  </ion-navbar>
+  <br><br>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="today">
+        TODAY
+      </ion-segment-button>
+      <ion-segment-button value="week">
+        WEEK
+      </ion-segment-button>
+      <ion-segment-button value="month">
+        MONTH
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-card-content>
+
+      <ion-card>
+        <ion-card-content>
+          <ion-item>
+            <ion-label>
+              <h2>จำนวนครั้งที่ถูกปรับ</h2>
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <ion-item>
+            <ion-label>
+              <h2>จำนวนค่าปรับ(บาท)</h2>
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-8>
+            <ion-img width="280" height="280" src="http://dekdee.informatics.buu.ac.th/~59160164/grahp3.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { ReportSalaryPage } from '../report-salary/report-salary';
+import { ReportFinePage } from '../report-fine/report-fine';
 
 @Component({
   selector: 'page-home',
@@ -14,8 +15,11 @@ export class HomePage {
   }
 
   report_salary() {
-    console.log("test pass")
     this.navCtrl.push(ReportSalaryPage)
+  }
+
+  report_fine(){
+    this.navCtrl.push(ReportFinePage)
   }
 
 }
