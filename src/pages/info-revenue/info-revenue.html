@@ -1,44 +1,39 @@
 <ion-header>
-<ion-navbar>
+  <ion-navbar>
 
-  <!-- <ion-icon name="arrow-back"></ion-icon> -->
-  <ion-title>
-    ข้อมูลรายรับ
-  </ion-title>
+    <!-- <ion-icon name="arrow-back"></ion-icon> -->
+    <ion-title>
+      ข้อมูลรายรับ
+    </ion-title>
 
 
-</ion-navbar>
-  
+  </ion-navbar>
+
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card *ngFor="let row_revenue of arr_revenue">
+    <ion-card-header>
+      {{row_revenue.re_type}}
+    </ion-card-header>
+    <ion-card-content>
+      หน่วยเงิน : {{row_revenue.cu_name}}
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-card>
 
     <ion-list>
       <ion-item>
         เงินประจำตำแหน่ง
       </ion-item>
-    </ion-list>
-
-    <ion-list>
       <ion-item>
-        เงินเดือน
+        เงินประจำตำแหน่ง
       </ion-item>
     </ion-list>
 
-    <ion-list>
-      <ion-item>
-        เงินเดือนย้อนหลัง
-      </ion-item>
-    </ion-list>
 
-    <ion-list>
-      <ion-item>
-        โบนัส
-      </ion-item>
-    </ion-list>
-    
-  </ion-card>
+
+  </ion-card> -->
 </ion-content>
 
 

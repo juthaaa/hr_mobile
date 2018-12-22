@@ -26,6 +26,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { UserdataProvider } from '../providers/userdata/userdata';
 
 import { HttpModule } from '@angular/http';
+import { CurrencydataProvider } from '../providers/currencydata/currencydata';
+import { InsertInfoRevenueProvider } from '../providers/insert-info-revenue/insert-info-revenue';
+import { RevenuedataProvider } from '../providers/revenuedata/revenuedata';
 
 
 
@@ -78,7 +81,10 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UserdataProvider
+    UserdataProvider,
+    CurrencydataProvider,
+    InsertInfoRevenueProvider,
+    RevenuedataProvider
   ]
 })
 export class AppModule {}

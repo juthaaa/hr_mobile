@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { InfoRevenueAddPage } from '../info-revenue-add/info-revenue-add';
 
+import { RevenuedataProvider } from '../../providers/revenuedata/revenuedata';
+
 /**
  * Generated class for the InfoRevenuePage page.
  *
@@ -17,11 +19,21 @@ import { InfoRevenueAddPage } from '../info-revenue-add/info-revenue-add';
 })
 export class InfoRevenuePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  arr_revenue:any
+
+  constructor(public navCtrl: NavController, public revenues: RevenuedataProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InfoRevenuePage');
+    this.revenues.getcurrency().subscribe((response) => {
+      //resolve(data);
+      this.arr_revenue = response
+      console.log(this.arr_revenue);
+
+    },
+      err => {
+        console.log(err.type)
+      })
   }
 
   pop_page(){

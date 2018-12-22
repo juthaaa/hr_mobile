@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar>
-    
+
     <!-- <ion-icon name="arrow-back"></ion-icon> -->
     <ion-title>
       ข้อมูลพื้นฐาน
     </ion-title>
-    
+
 
   </ion-navbar>
   <br><br>
@@ -16,24 +16,31 @@
   <ion-card>
     <br>
     <ion-title>ข้อมูลประเภทรายรับ</ion-title>
-    <ion-list><br>
+<form (submit)="addRevenue(revenue_name.value,currency_val.value)">
+    <ion-list>
+      <br>
+
       <ion-card>
         <br>
+        
         <ion-item>
 
-          <ion-input placeholder="ชื่อรายรับ"></ion-input>
+          <ion-input placeholder="ชื่อรายรับ" #revenue_name></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-select placeholder="หน่วยรายรับ" style="min-width: 100%;">
-            <ion-option value="1">บาท</ion-option>
-            <ion-option value="2">เปอร์เซ็น</ion-option>
+          <ion-select placeholder="หน่วยรายรับ" style="min-width: 100%;" #currency_val>
+            <ion-option *ngFor="let row_currency of arr_currency;" value={{row_currency.cu_id}}>{{row_currency.cu_name}}</ion-option>
           </ion-select>
         </ion-item>
+        
       </ion-card>
+
+
       <br>
     </ion-list>
+    <button ion-button block type="submit"> บันทึก</button>
+</form>
 
-    <button ion-button block> บันทึก</button>
   </ion-card>
 </ion-content>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController} from 'ionic-angular';
+
+import { CurrencydataProvider } from '../../providers/currencydata/currencydata';
 
 /**
  * Generated class for the InfoRevenueAddPage page.
@@ -15,11 +17,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InfoRevenueAddPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  arr_currency: any
+
+  constructor(public navCtrl: NavController, public currency: CurrencydataProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InfoRevenueAddPage');
-  }
+    this.currency.getcurrency().subscribe((response) => {
+      //resolve(data);
+      this.arr_currency = response
+      console.log(this.arr_currency);
 
+    },
+      err => {
+        console.log(err.type)
+      })
+  }
+  addRevenue(name_revenue,val_currency){
+    
+    
+    console.log(name_revenue);
+    console.log(val_currency);
+    
+    
+  }
+  
 }
