@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController} from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
 import { CurrencydataProvider } from '../../providers/currencydata/currencydata';
+import { InsertInfoRevenueProvider } from '../../providers/insert-info-revenue/insert-info-revenue';
+//import { jsonpCallbackContext } from '@angular/common/http/src/module';
 
 /**
  * Generated class for the InfoRevenueAddPage page.
@@ -18,8 +20,8 @@ import { CurrencydataProvider } from '../../providers/currencydata/currencydata'
 export class InfoRevenueAddPage {
 
   arr_currency: any
-
-  constructor(public navCtrl: NavController, public currency: CurrencydataProvider) {
+  data = {}
+  constructor(public navCtrl: NavController, public currency: CurrencydataProvider, public add_revenue: InsertInfoRevenueProvider) {
   }
 
   ionViewDidLoad() {
@@ -33,13 +35,22 @@ export class InfoRevenueAddPage {
         console.log(err.type)
       })
   }
-  addRevenue(name_revenue,val_currency){
+  addRevenue() {
+
+    // this.revenue.re_type = name_revenue
+    // this.revenue.re_cu_id = val_currency
+    // this.revenue.re_active = 'Y'
+    // this.revenue.re_us_id = 12
+    // this.revenue.re_update = new Date()
+    console.log(this.data);
     
-    
-    console.log(name_revenue);
-    console.log(val_currency);
-    
-    
+    console.log("11111111111111111");
+
+    this.add_revenue.insertinfo_revenue(this.data["re_type"], this.data["re_cu_is"])
+    this.navCtrl.pop()
+    //console.log(name_revenue);
+    //console.log(val_currency);
+    //this.add_revenue.insertinfo_revenue(this.revenue)
   }
-  
+
 }

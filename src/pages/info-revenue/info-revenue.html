@@ -12,35 +12,51 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let row_revenue of arr_revenue">
-    <ion-card-header>
-      {{row_revenue.re_type}}
-    </ion-card-header>
-    <ion-card-content>
-      หน่วยเงิน : {{row_revenue.cu_name}}
-    </ion-card-content>
-  </ion-card>
-  <!-- <ion-card>
 
-    <ion-list>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let row_revenue of arr_revenue">
       <ion-item>
-        เงินประจำตำแหน่ง
+
+        <h2>{{row_revenue.re_type}}</h2>
+
+        <p>หน่วยเงิน : {{row_revenue.cu_name}}</p>
+
+
+
       </ion-item>
-      <ion-item>
-        เงินประจำตำแหน่ง
-      </ion-item>
-    </ion-list>
+      <ion-item-options side="right">
+        <button ion-button color="warning">
+          <ion-icon name="create"></ion-icon>
+          edit
+        </button>
+        <button ion-button color="danger">
+          <ion-icon name="trash"></ion-icon>
+          delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
 
 
-  </ion-card> -->
-</ion-content>
 
 
-<ion-footer>
-  <ion-fab bottom right>
-    <button ion-button (click)="add_info_revenue()">
-      <ion-icon name="add"></ion-icon>
-    </button>
-  </ion-fab>
-</ion-footer>
+
+
+
+
+
+
+  <!-- <button ion-button clear item-end (click)="edit_info_revenue(row_revenue.re_id)">Edit</button>
+    <button ion-button clear item-end (click)="delete_info_revenue(row_revenue.re_id)">Delete</button> -->
+
+
+
+  <ion-footer>
+    <ion-fab bottom right>
+      <button ion-button (click)="add_info_revenue()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab>
+  </ion-footer>

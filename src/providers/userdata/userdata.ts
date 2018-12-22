@@ -15,7 +15,7 @@ export class UserdataProvider {
 
   constructor(public http: HttpClient) { }
 
-  apiUrl: string = "http://127.0.0.1:112"
+  apiUrl: string = "http://10.80.6.160:1032"
 
   getperson() {
     return this.http.get(this.apiUrl + '/get_all_person', httpOptions)

@@ -19,6 +19,7 @@ import { ReportSalaryDatePage } from '../pages/report-salary-date/report-salary-
 import { InfoExpenditurePage } from '../pages/info-expenditure/info-expenditure';
 import { InfoBankPage } from '../pages/info-bank/info-bank';
 import { InfoFinePage } from '../pages/info-fine/info-fine';
+import { InfoRevenueUpdatePage } from '../pages/info-revenue-update/info-revenue-update';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -49,7 +50,8 @@ import { RevenuedataProvider } from '../providers/revenuedata/revenuedata';
     ReportSalaryDatePage,
     InfoExpenditurePage,
     InfoBankPage,
-    InfoFinePage
+    InfoFinePage,
+    InfoRevenueUpdatePage
     
   ],
   imports: [
@@ -75,7 +77,8 @@ import { RevenuedataProvider } from '../providers/revenuedata/revenuedata';
     ReportSalaryDatePage,
     InfoExpenditurePage,
     InfoBankPage,
-    InfoFinePage
+    InfoFinePage, 
+    InfoRevenueUpdatePage
   ],
   providers: [
     StatusBar,

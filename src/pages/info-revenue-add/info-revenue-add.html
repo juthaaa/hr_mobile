@@ -16,7 +16,7 @@
   <ion-card>
     <br>
     <ion-title>ข้อมูลประเภทรายรับ</ion-title>
-<form (submit)="addRevenue(revenue_name.value,currency_val.value)">
+<form (ngSubmit)=" addRevenue()">
     <ion-list>
       <br>
 
@@ -25,11 +25,11 @@
         
         <ion-item>
 
-          <ion-input placeholder="ชื่อรายรับ" #revenue_name></ion-input>
+<ion-input placeholder="ชื่อรายรับ" [(ngModel)]="data.re_type" name="re_type"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-select placeholder="หน่วยรายรับ" style="min-width: 100%;" #currency_val>
+<ion-select placeholder="หน่วยรายรับ" style="min-width: 100%;" [(ngModel)]="data.re_cu_is" name="re_cu_is">
             <ion-option *ngFor="let row_currency of arr_currency;" value={{row_currency.cu_id}}>{{row_currency.cu_name}}</ion-option>
           </ion-select>
         </ion-item>
